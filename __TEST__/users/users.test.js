@@ -1,5 +1,5 @@
-const request = require('supertest');
-const app = require('../../index');
+const request = require('supertest')
+const app = require('../../index')
 
 describe('GET users', () => {
   afterAll((done) => {
@@ -8,7 +8,7 @@ describe('GET users', () => {
   })
 
   test('responds with a 200 status code', async () => {
-    const response = await request(app).get('/api/v1/users');
-    expect(response.status).toBe(200);
-  });
-});
+    const response = await request(app).get('/api/v1/users')
+    expect(response.status).toBe(200)
+  })
+})
