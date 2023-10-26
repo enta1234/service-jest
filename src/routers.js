@@ -10,4 +10,7 @@ router.use(express.urlencoded({extended: true}))
 // controller
 router.use(userController)
 
+// Unknown URL
+router.use('*', (_, res) => res.status(404).send('Unknown URL'))
+
 module.exports = router
